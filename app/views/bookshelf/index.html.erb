@@ -1,0 +1,12 @@
+<h1>本棚一覧</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= image_tag book.image_url, alt: 'book cover' %>
+      <h3><%= book.title %></h3>
+      <p>著者: <%= book.author %></p>
+      <p>発売日: <%= book.published_date %></p>
+      
+      <% end %>
+      
