@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,700;1,400&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700&family=Philosopher:ital@1&family=Zen+Kurenaido&display=swap");
+
+//共通
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: rgb(82, 80, 76);
+  background-color: #fafbfb;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0.4%;
+}
+
+.page_header {
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 4px 0px rgba(119, 117, 117, 0.25);
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .logo_font {
+    width: 145px;
+    margin-top: 5px;
+    margin-left: 120px;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+}
+
+//footer
+footer {
+  background-color: rgba(221, 219, 219, 0.559);
+  text-align: center;
+
+  padding: 20px 0;
+  margin-top: auto;
+
+  p {
+    color: rgb(144, 142, 142);
+    font-size: 0.875rem;
+  }
+}
+.footer_fixed {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+
+.sidebar_flex {
+  display: flex;
+}
