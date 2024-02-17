@@ -1,4 +1,4 @@
-<h1>本一覧</h1>
+<div class="footer_fixed">
 
 <%= form_tag search_path, method: :get do %>
   <%= text_field_tag :query, params[:query] %>
@@ -35,4 +35,6 @@
   <% else %>
     <p>検索結果がありません。</p>
   <% end %>
+</div>
+
 </div>

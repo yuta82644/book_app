@@ -11,14 +11,15 @@
   </head>
 
   <body>
+  <%= render 'shared/header' %>
+  <div class="sidebar_flex">
+  <%= render 'shared/sidebar'%>
+  <div>
     <p><%= notice %></p>
-    <% if current_user %>
-      <div>あなたの名前:<%= current_user.name %></div>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path %></li>
-      <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-    <% end %>
+ 
     <%= yield %>
+  </div>
+  </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
