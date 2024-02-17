@@ -60,3 +60,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'google_books'
 gem 'faraday'
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
