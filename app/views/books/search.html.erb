@@ -1,21 +1,22 @@
-<div class="footer_fixed">
 
+<div class="search-container">
 <%= form_tag search_path, method: :get do %>
-  <%= text_field_tag :query, params[:query] %>
-  <%= submit_tag '検索' %>
+  <%= text_field_tag :query, params[:query],class: "search-field" %>
+  <%= submit_tag '検索',class: "input" %>
 <% end %>
+</div>
 
-<div>
+<div class="book-container wrapper">
   <% if @books.present? %>
-    <h2>検索結果</h2>
-    <ul>
+    
       <% @books['items'].each do |item| %>
+    <div class="book-card">
         <% volume_info = item['volumeInfo'] %>
-        <li>
+        
           <% if volume_info['imageLinks'].present? %>
-            <%= image_tag volume_info['imageLinks']['thumbnail'], alt: 'book cover' %>
+            <%= image_tag volume_info['imageLinks']['thumbnail'], alt: 'book cover',class: "book-img" %>
           <% end %>
-          <h3><%= volume_info['title'] %></h3>
+          <h2><%= volume_info['title'] %></h2>
           <% if volume_info['authors'].present? %>
             <p>著者: <%= volume_info['authors'].join(', ') %></p>
           <% end %>
@@ -23,18 +24,21 @@
             <p>発売日: <%= volume_info['publishedDate'] %></p>
           <% end %>
           <%= form_with(url: add_to_bookshelf_path, method: :post) do |form| %>
+          <div class="book-btn">
             <%= form.hidden_field :title, value: volume_info['title'] %>
             <%= form.hidden_field :author, value: volume_info['authors']&.join(', ') %>
             <%= form.hidden_field :published_date, value: volume_info['publishedDate'] %>
             <%= form.hidden_field :image_url, value: volume_info['imageLinks']['thumbnail'] %>
-            <%= form.submit '本棚へ' %>
+            <%= form.submit '本棚へ→' %>
           <% end %>
-        </li>
+          </div>
+        
+    </div>
       <% end %>
-    </ul>
+    
   <% else %>
     <p>検索結果がありません。</p>
   <% end %>
-</div>
+
 
 </div>
