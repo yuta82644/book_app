@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+before_action :authenticate_user!
 def search
     if params[:query].nil?
       return
@@ -13,8 +13,8 @@ def search
     end
   end
   def add_to_bookshelf
-      @book = Book.new(book_params)
-
+      # @book = Book.new(book_params)
+      @book = current_user.books.new(book_params)
       if @book.save
         redirect_to bookshelf_index_path, notice: '本を本棚に追加しました'
       else
