@@ -22,9 +22,13 @@
           <% if volume_info['publishedDate'].present? %>
             <p>発売日: <%= volume_info['publishedDate'] %></p>
           <% end %>
-       
-
-
+          <%= form_with(url: add_to_bookshelf_path, method: :post) do |form| %>
+            <%= form.hidden_field :title, value: volume_info['title'] %>
+            <%= form.hidden_field :author, value: volume_info['authors']&.join(', ') %>
+            <%= form.hidden_field :published_date, value: volume_info['publishedDate'] %>
+            <%= form.hidden_field :image_url, value: volume_info['imageLinks']['thumbnail'] %>
+            <%= form.submit '本棚へ' %>
+          <% end %>
         </li>
       <% end %>
     </ul>

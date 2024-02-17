@@ -12,5 +12,21 @@ def search
       @books = JSON.parse(res.body)
     end
   end
+  def add_to_bookshelf
+      @book = Book.new(book_params)
 
-end
+      if @book.save
+        redirect_to bookshelf_index_path, notice: '本を本棚に追加しました'
+      else
+        flash.now[:alert] = '本の追加に失敗しました'
+        render 'search'
+      end
+    end
+
+private
+
+    def book_params
+      params.permit(:title, :author, :published_date, :image_url)
+    end
+  end
+
