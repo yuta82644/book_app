@@ -4,8 +4,18 @@
 <p>発売日: <%= @book.published_date %></p>
 
 <% if @book.review.present? %>
-  <p>レビュー: <%= @book.review %></p>
+  <p>感想: <%= @book.review %></p>
   <%= link_to '編集', edit_bookshelf_path(@book), class: 'btn btn-primary' %>
 <% else %>
-  <p>感想</p>
+  <p>感想:</p>
 <% end %>
+
+<% if @book.review.blank? %>
+  <%= form_with(url: add_review_bookshelf_path(@book), method: :post) do |form| %>
+    <%= form.text_area :review %>
+    <%= form.submit '保存' %>
+  <% end %>
+<% end %>
+
+<%= button_to '削除', bookshelf_path(@book), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+<%= link_to '戻る', bookshelf_index_path %>

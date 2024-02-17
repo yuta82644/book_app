@@ -1,0 +1,12 @@
+<h1><%= @book.title %></h1>
+<%= image_tag @book.image_url, alt: 'book cover' %>
+<p>著者: <%= @book.author %></p>
+<p>発売日: <%= @book.published_date %></p>
+
+<%= form_with(model: @book, url: bookshelf_path(@book), method: :patch) do |form| %>
+  <%= form.label :review, '編集' %>
+  <%= form.text_area :review %>
+  <%= form.submit '保存' %>
+<% end %>
+
+<%= link_to '戻る', bookshelf_index_path %>
