@@ -21,10 +21,11 @@
 }
 .book-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3つの等しい幅の列 */
-  gap: 20px; /* 列と列の間隔 */
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
   margin-bottom: 20px;
+ 
 
   .book-img {
     width: 160px;
@@ -44,7 +45,9 @@
   .book-card {
     margin-bottom: 40px;
     .book-btn {
-      text-align: right;
+      // text-align: right;
+      // margin-right: 40px;
+      padding-left: 90px;
     }
     h2 {
       font-size: 1.3rem;

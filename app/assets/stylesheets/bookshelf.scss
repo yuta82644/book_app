@@ -1,3 +1,49 @@
 // Place all the styles related to the bookshelf controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.bookshelf-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .book-img {
+    width: 160px;
+    height: 230px;
+    border: solid 1px #777777;
+  }
+  .book-card {
+    margin-bottom: 40px;
+    
+    h2 {
+      font-size: 1.3rem;
+      padding-left: 10px;
+    }
+    p {
+      padding-left: 12px;
+      font-size: 1.2rem;
+    }
+    .review{
+      margin-left: 90px;
+    }
+    .link-text {
+      color: rgb(82, 80, 76);
+      border-bottom: solid 0.3px;
+      font-size: 1.3rem;
+      &:hover {
+        opacity: 0.6;
+      }
+
+    }
+
+  }
+  
+}
+.link-text-search {
+  color: rgb(82, 80, 76);
+  font-size: 1.3rem;
+
+}
+

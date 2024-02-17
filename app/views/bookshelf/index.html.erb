@@ -1,14 +1,18 @@
-<h1>本棚一覧</h1>
+<h2>本棚</h2>
 
-<ul>
+<div class="bookshelf-container wrapper">
   <% @books.each do |book| %>
-    <li>
-      <%= image_tag book.image_url, alt: 'book cover' %>
-      <h3><%= book.title %></h3>
+    <div class="book-card">
+      <%= image_tag book.image_url, class: "book-img" %>
+      <h2><%= book.title %></h2>
       <p>著者: <%= book.author %></p>
       <p>発売日: <%= book.published_date %></p>
-      <%= link_to '感想を書く', bookshelf_path(book), class: 'btn btn-primary' %>
-    </li>
+      <div class="review">
+      <%= link_to '感想を書く→', bookshelf_path(book), class: 'link-text' %>
+      </div>
+    
+    </div>
   <% end %>
-</ul>
-<%= link_to '本検索に戻る', search_path %>
+
+</div>
+<%= link_to '←本検索に戻る', search_path, class: 'link-text-search'%>
