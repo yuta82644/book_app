@@ -2,7 +2,7 @@
 class BookshelfController < ApplicationController
   before_action :authenticate_user!
   def index
-    @books = Book.all
+    @books = current_user.books
   end
 
   def show
