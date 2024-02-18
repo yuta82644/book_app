@@ -13,6 +13,7 @@ def search
       @books = {} unless @books['items'].present?
     end
   end
+
   def add_to_bookshelf
       @book = current_user.books.new(book_params)
       if @book.save

@@ -5,18 +5,16 @@
 .search-container {
   margin-bottom: 30px;
   .input {
-
-    background-color:  #fafbfb;
+    background-color: #fafbfb;
     border: none;
-    border-bottom: solid 0.3px ;
+    border-bottom: solid 0.3px;
     cursor: pointer;
     box-shadow: 4px 4px 4px #52504c;
   }
   .search-field {
     border: none;
-    border-bottom: solid 0.3px  rgb(82, 80, 76);
+    border-bottom: solid 0.3px rgb(82, 80, 76);
     width: 200px;
-
   }
 }
 .book-container {
@@ -25,26 +23,21 @@
   gap: 20px;
   justify-content: center;
   margin-bottom: 20px;
- 
 
   .book-img {
     width: 160px;
     height: 230px;
     border: solid 1px #777777;
-
-
   }
   input {
-    background-color:  #fafbfb;
+    background-color: #fafbfb;
     border: none;
-    border-bottom: solid 1px rgb(82, 80, 76) ;
+    border-bottom: solid 1px rgb(82, 80, 76);
     cursor: pointer;
     color: rgb(82, 80, 76);
     &:hover {
       opacity: 0.5;
     }
-    // box-shadow: 4px 4px 4px #52504c;
-    
   }
   .book-card {
     margin-bottom: 40px;
