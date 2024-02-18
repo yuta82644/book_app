@@ -8,12 +8,12 @@ def search
     else
       url = "https://www.googleapis.com/books/v1/volumes"
       text = params[:query]
-      res = Faraday.get(url, q: text, langRestrict: 'ja', maxResults: 20)
+      res = Faraday.get(url, q: text, langRestrict: 'ja', maxResults: 30)
       @books = JSON.parse(res.body)
+      @books = {} unless @books['items'].present?
     end
   end
   def add_to_bookshelf
-      # @book = Book.new(book_params)
       @book = current_user.books.new(book_params)
       if @book.save
         redirect_to bookshelf_index_path, notice: '本を本棚に追加しました'
