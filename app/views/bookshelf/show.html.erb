@@ -3,7 +3,11 @@
     <h1><%= @book.title %></h1>
     <div class="grid">
       <div class="book-imgarea">
-        <%= image_tag @book.image_url, class: "book-img" %>
+       <% if @book.image_url.present? %>
+          <%= image_tag @book.image_url, class: "book-img" %>
+        <% else %>
+          <%= image_tag 'noimage-1-760x460.png', alt: 'No Image', class: "book-img" %>
+        <% end %>
       </div>
       <div class="book-info">
         <p>著者: <%= @book.author %></p>
