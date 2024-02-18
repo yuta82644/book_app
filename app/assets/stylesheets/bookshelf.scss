@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+//bookshelf一覧画面
+
 .bookshelf-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,7 +18,7 @@
   }
   .book-card {
     margin-bottom: 40px;
-    
+
     h2 {
       font-size: 1.3rem;
       padding-left: 10px;
@@ -25,7 +27,7 @@
       padding-left: 12px;
       font-size: 1.2rem;
     }
-    .review{
+    .review {
       margin-left: 90px;
     }
     .link-text {
@@ -35,15 +37,82 @@
       &:hover {
         opacity: 0.6;
       }
-
     }
-
   }
-  
 }
 .link-text-search {
   color: rgb(82, 80, 76);
   font-size: 1.3rem;
-
 }
 
+// bookshelfshow画面
+
+.show-container,.edit-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  p {
+    font-size: 1.3rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+  .book-imgarea {
+    grid-column: 1;
+    margin-bottom: 40px;
+  }
+  .book-info {
+    grid-column: 2;
+    max-width: 700px;
+  }
+  .book-img {
+    width: 180px;
+    height: 250px;
+    border: solid 1px #777777;
+    margin-right: 30px;
+  }
+  .review-area {
+    margin-bottom: 80px;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  a {
+    color: rgb(82, 80, 76);
+    font-size: 1.3rem;
+    
+  }
+  textarea {
+    width: 500px;
+    height: 300px;
+  }
+}
+// .show-container {
+//   width: 200px;
+
+//   .flex {
+//     display: flex;
+//     flex-direction: row;
+//   }
+
+//   .book-show {
+//     width: 400px;
+//   }
+
+//   .book-img {
+//     width: 180px;
+//     height: 250px;
+//     border: solid 1px #777777;
+//     margin-right: 30px;
+//   }
+
+//   p {
+//     font-size: 1.3rem;
+//   }
+
+//   .review-area {
+//     width: 400px;
+//     min-height: 200px; /* 最低の高さを指定 */
+//   }
+// }

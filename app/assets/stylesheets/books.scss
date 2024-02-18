@@ -37,16 +37,18 @@
   input {
     background-color:  #fafbfb;
     border: none;
-    border-bottom: solid 0.3px ;
+    border-bottom: solid 1px rgb(82, 80, 76) ;
     cursor: pointer;
-    box-shadow: 4px 4px 4px #52504c;
+    color: rgb(82, 80, 76);
+    &:hover {
+      opacity: 0.5;
+    }
+    // box-shadow: 4px 4px 4px #52504c;
     
   }
   .book-card {
     margin-bottom: 40px;
     .book-btn {
-      // text-align: right;
-      // margin-right: 40px;
       padding-left: 90px;
     }
     h2 {

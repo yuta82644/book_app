@@ -2,7 +2,8 @@
 class BookshelfController < ApplicationController
   before_action :authenticate_user!
   def index
-    @books = current_user.books
+    @books = current_user.books.order(created_at: :desc)
+
   end
 
   def show

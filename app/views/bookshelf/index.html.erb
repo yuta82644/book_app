@@ -1,5 +1,5 @@
 <h2>本棚</h2>
-
+ <div class="footer_fixed">
 <div class="bookshelf-container wrapper">
   <% @books.each do |book| %>
     <div class="book-card">
@@ -16,3 +16,4 @@
 
 </div>
 <%= link_to '←本検索に戻る', search_path, class: 'link-text-search'%>
+ </div>
