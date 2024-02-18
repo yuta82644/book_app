@@ -1,12 +1,23 @@
-<h1><%= @book.title %></h1>
-<%= image_tag @book.image_url, alt: 'book cover' %>
-<p>著者: <%= @book.author %></p>
-<p>発売日: <%= @book.published_date %></p>
-
-<%= form_with(model: @book, url: bookshelf_path(@book), method: :patch) do |form| %>
-  <%= form.label :review, '編集' %>
-  <%= form.text_area :review %>
-  <%= form.submit '保存' %>
-<% end %>
-
-<%= link_to '戻る', bookshelf_index_path %>
+<div class="footer_fixed">
+  <div class="edit-container">
+    <h1><%= @book.title %></h1>
+    <div class="grid">
+      <div class="book-imgarea">
+      <% if @book.image_url.present? %>
+          <%= image_tag @book.image_url, class: "book-img" %>
+        <% else %>
+          <%= image_tag 'noimage-1-760x460.png', alt: 'No Image', class: "book-img" %>
+        <% end %>
+      </div>
+      <div class="book-info">
+        <p>著者: <%= @book.author %></p>
+        <p>発売日: <%= @book.published_date %></p>
+      </div>
+    </div>
+    <%= form_with(model: @book, url: bookshelf_path(@book), method: :patch) do |form| %>
+      <%= form.text_area :review %>
+      <%= form.submit '保存' %>
+    <% end %>
+    <%= link_to '戻る', bookshelf_index_path %>
+  </div>
+</div>

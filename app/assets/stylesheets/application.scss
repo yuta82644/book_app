@@ -33,7 +33,7 @@ a {
 }
 
 .wrapper {
-  width: 1100px;
+  width: 1000px;
   margin: 0 auto;
   padding: 0.4%;
 }
@@ -50,8 +50,7 @@ a {
     width: 145px;
     margin-top: 5px;
     margin-left: 120px;
-    font-family: 'Times New Roman', Times, serif;
-
+    font-family: "Times New Roman", Times, serif;
   }
 }
 
@@ -59,13 +58,13 @@ a {
 footer {
   background-color: rgba(221, 219, 219, 0.559);
   text-align: center;
-
   padding: 20px 0;
   margin-top: auto;
+  margin-top: 40px;
 
   p {
     color: rgb(144, 142, 142);
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
 }
 .footer_fixed {
