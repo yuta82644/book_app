@@ -1,24 +1,24 @@
 # README
+## 本の管理webサービス　「HONDANA」
+  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+デプロイURL：　<https://tranquil-savannah-77547-7eef525b3952.herokuapp.com/>
 
-Things you may want to cover:
+* 開発言語
+  - Ruby 3.0.1
+  - Ruby on Rails 6.1.6
+    
+* 機能
+ 
+  - 「Google books API」を使用した本検索機能
+    
+  - 本に感想を書ける  
+     - 感想の編集
+     - 削除機能
+    
+   - ログイン   
+     - 新規登録  
+     - ゲストログイン  
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - シンプルで使いやすい見た目
